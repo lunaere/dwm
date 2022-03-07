@@ -75,6 +75,10 @@ static const char *termcmd[]  = { "urxvt", NULL };
 static const char *upvol[]   = { "amixer", "-q", "set", "Master", "5%+", "unmute", NULL };
 static const char *downvol[] = { "amixer", "-q", "set", "Master", "5%-", "unmute", NULL };
 static const char *mutevol[] = { "amixer", "-q", "set", "Master", "toggle", NULL };
+//screenshots
+static const char *ss[] = {"scrot", "/home/atd/pictures/screenshots/%Y-%m-%d-%T-screenshot.png", NULL};
+static const char *shiftss[] = {"scrot", "/home/atd/pictures/screenshots/%Y-%m-%d-%T-screenshot.png", "--select", "--line", "mode=edge", NULL};
+static const char *modss[] = {"scrot", "/home/atd/pictures/screenshots/%Y-%m-%d-%T-screenshot.png", "--focused", "--border", NULL};
 
 #include "shiftview.c"
 static char *endx[] = { "/bin/sh", "-c", "endx", "externalpipe", NULL };
@@ -121,6 +125,10 @@ static Key keys[] = {
 	TAGKEYS(                        XK_8,                      7)
 	TAGKEYS(                        XK_9,                      8)
 	{ MODKEY|ShiftMask,             XK_q,      quit,           {0} },
+	{0,			XK_Print,	spawn,	{.v = ss}},
+	{ShiftMask,		XK_Print,	spawn,	{.v = shiftss}},
+	{MODKEY,		XK_Print,	spawn,	{.v = modss}},
+
 };
 
 /* button definitions */
