@@ -3,7 +3,7 @@
 ## Differences from the main repo
 - The same as [Outlaw's fork](https://github.com/MentalOutlaw/dwm) except I added [hide vacant tags](https://dwm.suckless.org/patches/hide_vacant_tags/).
 - Removed ttf-font-awesome dependancy and use numbers for tagging 
-- Removed unnecessary file backup
+- Removed unnecessary files
 
 
 ## dependancies
