@@ -1,17 +1,17 @@
 # Fork of dwm for X
 
-##Differences from the main repo
+## Differences from the main repo
 - The same as [Outlaw's fork](https://github.com/MentalOutlaw/dwm) except I added [hide vacant tags](https://dwm.suckless.org/patches/hide_vacant_tags/).
-- Removed ttf-font-awesome dependancy and use numbers for tagging
-- 
+- Removed ttf-font-awesome dependancy and use numbers for tagging 
 
 
-##dependancies
+## dependancies
 ```
 sudo pacman -Syu base-devel xorg-xinit xorg-server libxft libxinerama libx11
 ```
 
-##How to install for newbie
+
+## How to install for newbie
 ```
 git clone https://github.com/lunaere/dwm
 cd dwm
