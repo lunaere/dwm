@@ -9,6 +9,9 @@
 ```
 sudo pacman -Syu base-devel xorg-xinit xorg-server libxft libxinerama libx11 scrot
 ```
+For minimal base install, it is good to keep in mind that you need to install font package.
+This usually bundled with your web browsers, but you can always install them separately.
+
 
 
 ## How to install for newbie.
