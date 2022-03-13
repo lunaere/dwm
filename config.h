@@ -75,10 +75,6 @@ static const char *mutevol[] = { "amixer", "-q", "set", "Master", "toggle", NULL
 static const char *ss[] = {"scrot", "/home/atd/Pictures/screenshots/%Y-%m-%d-%T-screenshot.png", NULL};
 static const char *shiftss[] = {"scrot", "/home/atd/Pictures/screenshots/%Y-%m-%d-%T-screenshot.png", "--select", "--line", "mode=edge", NULL};
 static const char *modss[] = {"scrot", "/home/atd/Pictures/screenshots/%Y-%m-%d-%T-screenshot.png", "--focused", "--border", NULL};
-//sidebar
-static const char *sidebar[] = {"eww", "open-many", "weather_side", "time_side", "smol_calendar", "player_side", "sys_side", "sliders_side", NULL};
-static const char *ewwclose[] = {"eww", "close-all", NULL};
-static const char *powermenu[] = {"powermenu.sh", NULL};
 
 #include "shiftview.c"
 static Key keys[] = {
@@ -123,12 +119,10 @@ static Key keys[] = {
 	TAGKEYS(                        XK_7,                      6)
 	TAGKEYS(                        XK_8,                      7)
 	TAGKEYS(                        XK_9,                      8)
-        { MODKEY|ShiftMask,             XK_q,   spawn,  {.v = powermenu}},
+        { MODKEY|ShiftMask,             XK_q,      quit,           {0} },
         {0,                     XK_Print,       spawn,  {.v = ss}},
         {ShiftMask,             XK_Print,       spawn,  {.v = shiftss}},
         {MODKEY,                XK_Print,       spawn,  {.v = modss}},
-        {MODKEY,                XK_s,   spawn,  {.v = sidebar}},
-        {MODKEY|ShiftMask,      XK_s,   spawn,  {.v = ewwclose}},
 };
 
 /* button definitions */
